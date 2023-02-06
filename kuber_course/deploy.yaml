@@ -21,7 +21,7 @@ spec:
         app: my-app
     spec:
       containers:
-      - image: temkaxd96/petclinic
+      - image: 
         name: petclinic
         ports:
         - containerPort: 8080
