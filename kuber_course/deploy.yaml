@@ -25,7 +25,7 @@ spec:
         name: petclinic
         ports:
         - containerPort: 8080
-        command: ["sleep", "3600"]
+        command: ["sleep", "60"]
         readinessProbe:
           failureThreshold: 5
           httpGet:
