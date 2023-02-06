@@ -3,4 +3,15 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: configmap-petclinic
+  namespace: application
 data:
+  database: h2
+  spring.sql.init.schema-locations: classpath*:db/${database}/schema.sql
+  spring.sql.init.data-locations: classpath*:db/${database}/data.sql
+  spring.thymeleaf.mode: HTML
+  spring.jpa.hibernate.ddl-auto: none
+  spring.jpa.open-in-view: "true"
+  spring.messages.basename: messages/messages
+  management.endpoints.web.exposure.include: "*"
+  logging.level.org.springframework: INFO
+  spring.web.resources.cache.cachecontrol.max-age: 12h
